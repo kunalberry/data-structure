@@ -1,0 +1,43 @@
+package com.test.array;
+
+
+
+public class MinAndMaxOfArray {
+	
+	static class Pair{
+		int min;
+		int max;
+	}
+	
+	public static Pair getMinMax(int[] arr,int arraySize) {
+		Pair pair = new Pair();
+		pair.max = Integer.MIN_VALUE;
+		pair.min = Integer.MAX_VALUE;
+		
+		
+		if(arraySize == 1) {
+				pair.max = arr[0];
+				pair.min = arr[0];
+		}
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i] > pair.max) {
+				pair.max = arr[i];
+			}
+			if(arr[i] < pair.min) {
+				pair.min = arr[i];
+			}
+		}
+		
+		
+		return pair;
+	}
+	
+	public static void main(String[] args) {
+		
+	 int[] newArr = {1,2,3,4,3};
+	 Pair pair = getMinMax(newArr, newArr.length - 1);
+	 System.out.println("Maximum => "+pair.max);
+	 System.out.println("Minimum => "+pair.min);
+	}
+
+}
