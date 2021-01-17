@@ -1,0 +1,45 @@
+package com.test.demo;
+
+public class SpiralTraversal {
+	
+	public static void main(String[] args) {
+		int matrix[][] = {{1, 2, 3, 4},
+						  {5, 6, 7, 8},
+		                  {9, 10, 11, 12},
+		                  {13, 14, 15,16}};
+		printSprinalTraversel(matrix);		
+	}
+
+	private static void printSprinalTraversel(int[][] arr) {
+		int rs = 0;
+		int cs = 0;
+		int re = arr.length- 1;
+		int ce = arr[0].length - 1;
+		int count = 0;
+		int tne = arr.length * arr[0].length - 1 ;
+		while(count <= tne) {
+		
+		for(int i = cs; i <= ce && count <= tne; i++) {
+			System.out.print(arr[rs][i]+" ");
+			count++;
+		}
+		rs++;
+		for(int i = rs; i <= re && count <= tne; i++) {
+			System.out.print(arr[i][ce]+" ");
+			count++;
+		}
+		ce--;
+		for(int i = ce; i >= cs && count <= tne; i--) {
+			System.out.print(arr[re][i]+" ");
+			count++;
+		}
+		re--;
+		for(int i =re; i >= rs && count <= tne; i--) {
+			System.out.print(arr[i][cs]+" ");
+			count++;
+		}
+		cs++;
+		}
+	}
+
+}
