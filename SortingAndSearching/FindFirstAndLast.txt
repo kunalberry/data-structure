@@ -3,7 +3,7 @@ package com.test.demo;
 public class FindFirstAndLastPosition {
 
 	public static void main(String[] args) {
-		int arr[] = {1,5,10,15,22,33,33,33,33,33,33,40,42,55,66,33};
+		int arr[] = {1,5,10,15,22,33,33,33,33,33,33,40,42,55,66};
 		int elementToBeFound = 33;
 		int firstIndex = findFirstIndex(arr,elementToBeFound);
 		int secondIndex = findSecondIndex(arr,elementToBeFound);
