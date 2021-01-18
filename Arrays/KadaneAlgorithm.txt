@@ -1,0 +1,23 @@
+package com.test.array;
+
+public class KadaneAlgorithm {
+	public static void main(String[] args) {
+		int[] arr = {1,2,7,-10,4,5};
+	    // Based on counter sum and maximum sum
+		int cs = arr[0];
+		int ms = arr[0];
+		for(int i = 1; i < arr.length; i++) {
+			if(cs < 0) {
+				cs = arr[i];
+			}else {
+				cs += arr[i];
+			}
+			if(cs > ms) {
+				ms = cs;
+			}
+		}
+		
+		System.out.println("Maximum Sum = "+ms);
+	}
+
+}
