@@ -1,0 +1,21 @@
+package com.test.array;
+
+import java.util.Arrays;
+
+public class KthSmallestInArray {
+	
+	public static void main(String[] args) {
+	
+		int[] arr = {12, 3, 5, 7, 19 };
+		int k = 2; // is the smallest element that we want to print
+		int element = kthSmallest(arr,k);
+		System.out.println("Kth Smallest Element is "+element);
+	}
+
+	private static int kthSmallest(int[] arr, int k) {
+		Arrays.sort(arr);
+		int kthSmallest = arr[k-1];
+		return kthSmallest;
+	}
+
+}
